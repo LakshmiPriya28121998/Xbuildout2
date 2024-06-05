@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import Login from './Login';
 import States from './States';
 import Weather from './Weather';
+import Spellcheck from './Spellcheck';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Login /> */}
     {/* <States /> */}
-    <Weather />
+    {/* <Weather /> */}
+    <Spellcheck />
 
   </React.StrictMode>
 );
