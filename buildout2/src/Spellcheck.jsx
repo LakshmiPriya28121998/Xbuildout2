@@ -31,6 +31,7 @@ const [suggestedText, setSuggestedText] = useState("");
 
     // Implement a basic spelling check and correction
     const words = text.split(" ");
+    console.log(words)
     const correctedWords = words.map((word) => {
       const correctedWord = customDictionary[word.toLowerCase()];
       return correctedWord || word;
