@@ -8,6 +8,7 @@ import States from './States';
 import Weather from './Weather';
 import Spellcheck from './Spellcheck';
 import Dictionary from './Dictionary';
+import Table from './Table';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,8 @@ root.render(
     {/* <States /> */}
     {/* <Weather /> */}
     {/* <Spellcheck /> */}
-    <Dictionary />
+    {/* <Dictionary /> */}
+    <Table />
 
   </React.StrictMode>
 );
