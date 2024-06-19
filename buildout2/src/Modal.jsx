@@ -42,21 +42,23 @@ const XModal = () => {
 
     // Phone number validation (10 digits)
     if (!/^\d{10}$/.test(phone)) {
-      setPhoneError('Invalid phone number. Please enter a 10-digit phone number.');
+      alert('Invalid phone number');
       return;
-    } else {
-      setPhoneError('');
     }
+    //  else {
+    //   setPhoneError('');
+    // }
 
     // Date of birth validation (check if future date)
     const currentDate = new Date();
     const selectedDate = new Date(dob);
     if (selectedDate >= currentDate) {
-      setDobError('Invalid date of birth. date of birth cannot be in the future.');
+      alert('Invalid date of birth');
       return;
-    } else {
-      setDobError('');
-    }
+    } 
+    // else {
+    //   setDobError('');
+    // }
 
     // If all validations pass, close modal (reset state is handled by closeModal)
     closeModal();
