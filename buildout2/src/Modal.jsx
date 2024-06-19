@@ -42,7 +42,7 @@ const XModal = () => {
 
     // Phone number validation (10 digits)
     if (!/^\d{10}$/.test(phone)) {
-      alert('Invalid phone number. Please enter a 10-digit phone number.');
+      setPhoneError('Invalid phone number. Please enter a 10-digit phone number.');
       return;
     } else {
       setPhoneError('');
@@ -52,7 +52,7 @@ const XModal = () => {
     const currentDate = new Date();
     const selectedDate = new Date(dob);
     if (selectedDate >= currentDate) {
-      alert('Invalid date of birth. date of birth cannot be in the future.');
+      setDobError('Invalid date of birth. date of birth cannot be in the future.');
       return;
     } else {
       setDobError('');
@@ -108,7 +108,7 @@ const XModal = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {/* {phoneError && <p className="error">{phoneError}</p>} */}
+              {phoneError && <p className="error">{phoneError}</p>}
 
               <label htmlFor="dob">Date of Birth:</label>
               <input
@@ -117,7 +117,7 @@ const XModal = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
-              {/* {dobError && <p className="error">{dobError}</p>} */}
+              {dobError && <p className="error">{dobError}</p>}
 
               <button type="submit" className="submit-button">Submit</button>
             </form>
