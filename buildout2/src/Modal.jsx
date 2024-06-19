@@ -34,11 +34,12 @@ const XModal = () => {
 
     // Email validation
     if (!email.includes('@')) {
-      setEmailError('Invalid email. Please check your email address.');
+      alert('Invalid email. Please check your email address.');
       return;
-    } else {
-      setEmailError('');
-    }
+    } 
+    // else {
+    //   setEmailError('');
+    // }
 
     // Phone number validation (10 digits)
     if (!/^\d{10}$/.test(phone)) {
