@@ -6,9 +6,7 @@ const XModal = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [dob, setDob] = useState('');
-//   const [emailError, setEmailError] = useState('');
-//   const [phoneError, setPhoneError] = useState('');
-//   const [dobError, setDobError] = useState('');
+
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => {
@@ -18,60 +16,42 @@ const XModal = () => {
     setEmail('');
     setPhone('');
     setDob('');
-    // setEmailError('');
-    // setPhoneError('');
-    // setDobError('');
+  
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate fields
-    if (!username || !email || !phone || !dob) {
-      alert('Please fill in all fields.');
-      return;
-    }
+    // if (!username || !email || !phone || !dob) {
+    //   alert('Please fill in all fields.');
+    //   return;
+    // }
 
-    // Email validation
     if (!email.includes('@')) {
       alert('Invalid email. Please check your email address.');
       return;
     } 
-    // else {
-    //   setEmailError('');
-    // }
 
-    // Phone number validation (10 digits)
     if (!/^\d{10}$/.test(phone)) {
       alert('Invalid phone number');
       return;
     }
-    //  else {
-    //   setPhoneError('');
-    // }
 
-    // Date of birth validation (check if future date)
     const currentDate = new Date();
     const selectedDate = new Date(dob);
     if (selectedDate >= currentDate) {
       alert('Invalid date of birth');
       return;
     } 
-    // else {
-    //   setDobError('');
-    // }
 
-    // If all validations pass, close modal (reset state is handled by closeModal)
     closeModal();
   };
 
   const handleModalClick = (e) => {
-    // Prevent modal from closing when clicking inside
     e.stopPropagation();
   };
 
   const handleOutsideModalClick = () => {
-    // Close modal when clicking outside
     if (isOpen) {
       closeModal();
     }
@@ -102,7 +82,6 @@ const XModal = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {/* {emailError && <p className="error">{emailError}</p>} */}
 
               <label htmlFor="phone">Phone Number:</label>
               <input
@@ -111,7 +90,6 @@ const XModal = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {/* {phoneError && <p className="error">{phoneError}</p>} */}
 
               <label htmlFor="dob">Date of Birth:</label>
               <input
@@ -120,7 +98,6 @@ const XModal = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
-              {/* {dobError && <p className="error">{dobError}</p>} */}
 
               <button type="submit" className="submit-button">Submit</button>
             </form>
