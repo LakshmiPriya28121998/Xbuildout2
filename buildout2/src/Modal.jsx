@@ -83,6 +83,7 @@ const XModal = () => {
         <div className="modal" onClick={handleModalClick}>
           <div className="modal-content">
             <form onSubmit={handleSubmit}>
+                <h1>Fill Details</h1>
               <label htmlFor="username">Username:</label>
               <input
                 type="text"
@@ -91,7 +92,7 @@ const XModal = () => {
                 onChange={(e) => setUsername(e.target.value)}
               />
 
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email Address:</label>
               <input
                 type="email"
                 id="email"
