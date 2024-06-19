@@ -9,6 +9,7 @@ import Weather from './Weather';
 import Spellcheck from './Spellcheck';
 import Dictionary from './Dictionary';
 import Table from './Table';
+import Modal from './Modal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,8 @@ root.render(
     {/* <Weather /> */}
     {/* <Spellcheck /> */}
     {/* <Dictionary /> */}
-    <Table />
+    {/* <Table /> */}
+    <Modal />
 
   </React.StrictMode>
 );
