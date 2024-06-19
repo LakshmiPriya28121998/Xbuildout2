@@ -6,9 +6,9 @@ const XModal = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [dob, setDob] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-  const [dobError, setDobError] = useState('');
+//   const [emailError, setEmailError] = useState('');
+//   const [phoneError, setPhoneError] = useState('');
+//   const [dobError, setDobError] = useState('');
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => {
@@ -18,9 +18,9 @@ const XModal = () => {
     setEmail('');
     setPhone('');
     setDob('');
-    setEmailError('');
-    setPhoneError('');
-    setDobError('');
+    // setEmailError('');
+    // setPhoneError('');
+    // setDobError('');
   };
 
   const handleSubmit = (e) => {
@@ -102,7 +102,7 @@ const XModal = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {emailError && <p className="error">{emailError}</p>}
+              {/* {emailError && <p className="error">{emailError}</p>} */}
 
               <label htmlFor="phone">Phone Number:</label>
               <input
@@ -111,7 +111,7 @@ const XModal = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {phoneError && <p className="error">{phoneError}</p>}
+              {/* {phoneError && <p className="error">{phoneError}</p>} */}
 
               <label htmlFor="dob">Date of Birth:</label>
               <input
@@ -120,7 +120,7 @@ const XModal = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
-              {dobError && <p className="error">{dobError}</p>}
+              {/* {dobError && <p className="error">{dobError}</p>} */}
 
               <button type="submit" className="submit-button">Submit</button>
             </form>
